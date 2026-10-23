@@ -16,10 +16,12 @@ prose-content {
     word-wrap: normal;
     direction: ltr;
     font-feature-settings: "dtls" off;
+    color: var(--foreground);
 
     display: inline-flex;
     flex-wrap: wrap;
     align-items: baseline;
+    max-inline-size: 100%;
 
     & * {
       border-color: currentColor;
@@ -109,6 +111,7 @@ prose-content {
     .tml-eqn::before {
       counter-increment: tmlEqnNo;
       content: "(" counter(tmlEqnNo) ")";
+      color: var(--muted-foreground);
     }
 
     @supports (-moz-appearance: none) {
@@ -391,9 +394,39 @@ prose-content {
   }
 
   math-display {
-    display: flex;
-    justify-content: safe center;
+    display: block;
+    max-inline-size: 100%;
+    margin-inline: auto;
+    padding-block: 0.25em;
     overflow-x: auto;
     overflow-y: hidden;
+    overscroll-behavior-inline: contain;
+    scrollbar-width: thin;
+    scrollbar-color: var(--border) transparent;
+    text-align: center;
+    -webkit-overflow-scrolling: touch;
+
+    &::-webkit-scrollbar {
+      height: 6px;
+    }
+
+    &::-webkit-scrollbar-thumb {
+      background-color: var(--border);
+      border-radius: 999px;
+    }
+
+    &::-webkit-scrollbar-thumb:hover {
+      background-color: var(--primary);
+    }
+
+    math {
+      margin-inline: auto;
+    }
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  prose-content math-display {
+    scroll-behavior: auto;
   }
 }
