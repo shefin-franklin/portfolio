@@ -41,10 +41,11 @@ prose-content {
     padding-inline-start: 0.5rem;
 
     &::marker {
-      color: var(--prose-marker);
+      color: var(--primary);
     }
 
-    > blockquote, .expressive-code {
+    > blockquote,
+    > .expressive-code {
       margin-block-start: 1em;
     }
 
@@ -58,7 +59,7 @@ prose-content {
       input[type="checkbox"] {
         margin-inline-end: 0.5em;
         vertical-align: middle;
-        accent-color: var(--foreground);
+        accent-color: var(--primary);
       }
     }
   }
