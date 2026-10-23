@@ -37,9 +37,9 @@
   src: local("Arial");
   font-weight: 100 700;
   font-style: normal;
-  size-adjust:       101.1663%;
-  ascent-override:   101.3184%;
-  descent-override:  27.183%;
+  size-adjust: 101.1663%;
+  ascent-override: 101.3184%;
+  descent-override: 27.183%;
   line-gap-override: 0%;
 }
 
@@ -48,9 +48,9 @@
   src: local("Arial");
   font-weight: 100 700;
   font-style: italic;
-  size-adjust:       101.1663%;
-  ascent-override:   101.3184%;
-  descent-override:  27.183%;
+  size-adjust: 101.1663%;
+  ascent-override: 101.3184%;
+  descent-override: 27.183%;
   line-gap-override: 0%;
 }
 
@@ -91,8 +91,8 @@
   src: local("Courier New");
   font-weight: 400 500;
   font-style: normal;
-  size-adjust:      99.9837%;
-  ascent-override:  102.5167%;
+  size-adjust: 99.9837%;
+  ascent-override: 102.5167%;
   descent-override: 27.5045%;
 }
 
@@ -101,8 +101,8 @@
   src: local("Courier New");
   font-weight: 400 500;
   font-style: italic;
-  size-adjust:      99.9837%;
-  ascent-override:  102.5167%;
+  size-adjust: 99.9837%;
+  ascent-override: 102.5167%;
   descent-override: 27.5045%;
 }
 
@@ -115,7 +115,19 @@
 }
 
 :root {
+  /* Font families */
   --font-sans: "IBM Plex Sans", "IBM Plex Sans Fallback", sans-serif;
   --font-mono: "IBM Plex Mono", "IBM Plex Mono Fallback", monospace;
   --font-math: "STIX Two Math", math;
+
+  /* Consistent typography weights */
+  --font-weight-normal: 400;
+  --font-weight-medium: 500;
+  --font-weight-semibold: 600;
+  --font-weight-bold: 700;
+
+  /* Improved text rendering */
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
 }
+
