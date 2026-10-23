@@ -1,12 +1,22 @@
 prose-content {
   a {
-    --underline: var(--muted-foreground);
+    --underline: var(--primary);
     color: var(--foreground);
+    text-decoration-color: var(--primary);
+    text-decoration-thickness: 1px;
+    text-underline-offset: 0.2em;
+    transition:
+      color var(--transition-fast),
+      text-decoration-color var(--transition-fast);
+
+    &:hover {
+      color: var(--primary);
+    }
   }
 
   :is(strong, b) {
     color: var(--foreground);
-    font-weight: var(--font-weight-medium);
+    font-weight: var(--font-weight-semibold);
   }
 
   :is(em, i) {
@@ -16,9 +26,14 @@ prose-content {
   :where(code) {
     font-family: var(--font-mono);
     font-size: 0.9em;
-    padding: 0.1em 0.3em;
+    padding: 0.1em 0.35em;
+    border: 1px solid var(--border);
     border-radius: var(--radius-sm);
-    background-color: color-mix(in oklab, var(--muted) 60%, transparent);
+    background-color: color-mix(
+      in oklab,
+      var(--muted) 60%,
+      transparent
+    );
 
     &[data-ec] :where(span[style^="--"]:not([class])) {
       color: light-dark(var(--0, inherit), var(--1, inherit));
@@ -43,6 +58,7 @@ prose-content {
     color: var(--foreground);
     border: 1px solid var(--border);
     border-radius: var(--radius-md);
+    background-color: var(--muted);
     box-shadow: inset 0 -1px 0 var(--border);
   }
 }
