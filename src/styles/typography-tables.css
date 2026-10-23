@@ -11,13 +11,19 @@ prose-content {
     margin-inline: auto;
     overflow-x: auto;
     font-size: var(--step--1);
+    border: 1px solid var(--border);
+    border-radius: var(--radius-md);
+    border-spacing: 0;
+    background-color: var(--background);
 
     thead {
+      background-color: var(--muted);
       border-block-end: 1.5px solid var(--table-border);
     }
 
     tr {
-      border-block: 1.5px solid var(--table-border);
+      border-block: 1px solid var(--table-border);
+      transition: background-color var(--transition-fast);
 
       &:first-child {
         border-block-start: 0;
@@ -26,22 +32,36 @@ prose-content {
       &:last-child {
         border-block-end: 0;
       }
+
+      &:hover {
+        background-color: color-mix(
+          in oklab,
+          var(--primary) 5%,
+          var(--background)
+        );
+      }
     }
 
     :is(th, td) {
       min-width: 10rem;
       max-width: 22rem;
+      border-block-end: 1px solid var(--table-border);
     }
 
     th {
-      padding: 0.5em 1em;
-      font-weight: var(--font-weight-medium);
+      padding: 0.75em 1em;
+      font-weight: var(--font-weight-semibold);
       color: var(--foreground);
       text-align: start;
+      white-space: nowrap;
+    }
+
+    th:first-child {
+      border-inline-start: 2px solid var(--primary);
     }
 
     td {
-      padding: 0.5em 1em;
+      padding: 0.75em 1em;
       color: var(--prose-foreground);
       text-align: start;
       vertical-align: top;
@@ -53,6 +73,10 @@ prose-content {
       > :last-child {
         margin-block-end: 0;
       }
+    }
+
+    tbody tr:last-child td {
+      border-block-end: 0;
     }
   }
 }
