@@ -6,500 +6,272 @@ import Layout from "@/layouts/Layout.astro"
 <Layout>
   <MetaPage slot="head" />
 
-  <main class="portfolio">
-    <header class="topbar">
-      <a class="brand" href="/" aria-label="Shefin Franklin home">
-        <span class="brand-mark">SF</span>
-        <span class="brand-name">SHEFIN<span class="blue">.</span>DEV</span>
-      </a>
-
-  <nav aria-label="Main navigation">
-    <a href="#about">About</a>
-    <a href="#projects">Projects</a>
-    <a href="#contact" class="nav-contact">Contact <span>↗</span></a>
-  </nav>
-</header>
+  <main class="home">
+    <header class="nav">
+      <span class="domain">shefin.dev</span>
+      <nav>
+        <a href="#about">About</a>
+        <a href="#projects">Projects</a>
+        <a href="#contact">Contact <span class="blue">↗</span></a>
+      </nav>
+    </header>
 
 <section class="hero" id="about">
-  <div class="hero-content">
-    <div class="availability">
-      <span class="status-dot"></span>
-      DEVELOPER PORTFOLIO
-    </div>
-
-    <p class="eyebrow">HELLO, WORLD. I'M</p>
-
-    <h1>Shefin<br /><span>Franklin.</span></h1>
-
-    <p class="hero-description">
-      I build for the web, explore new technologies, and turn ideas into
-      useful digital experiences.
+  <div class="hero-text">
+    <p class="eyebrow"><span class="dot"></span> DEVELOPER PORTFOLIO</p>
+    <h1>Building things<br />for the <span>web.</span></h1>
+    <p class="description">
+      I'm Shefin Franklin — a developer exploring technology and creating
+      useful digital experiences with thoughtful design and code.
     </p>
-
-    <div class="hero-actions">
-      <a class="button button-primary" href="#projects">
-        Explore my work <span>↘</span>
-      </a>
-      <a class="button button-secondary" href="#contact">
-        Get in touch <span>↗</span>
-      </a>
-    </div>
-
-    <div class="hero-meta">
-      <span><span class="blue">01</span> — DESIGN WITH PURPOSE</span>
-      <span><span class="blue">02</span> — BUILD WITH CARE</span>
+    <div class="actions">
+      <a class="primary" href="#projects">Explore projects <span>↘</span></a>
+      <a class="secondary" href="#contact">Get in touch <span>↗</span></a>
     </div>
   </div>
 
-  <div class="portrait-area">
-    <div class="portrait-index">PROFILE / 001</div>
-    <div class="portrait-frame">
-      <div class="portrait-ring"></div>
-      <img
-        class="portrait"
-        src="/static/shefin.png"
-        alt="Portrait of Shefin Franklin"
-        fetchpriority="high"
-      />
-      <span class="corner corner-tl"></span>
-      <span class="corner corner-br"></span>
-    </div>
-    <div class="portrait-caption">
-      <span class="caption-line"></span>
-      <span>CURIOUS BY NATURE.<br />CREATIVE BY CHOICE.</span>
-      <span class="caption-code">SF—001</span>
-    </div>
+  <div class="portrait">
+    <img
+      src="/images/profile.jpg"
+      alt="Portrait of Shefin Franklin"
+      fetchpriority="high"
+    />
+    <span class="image-label">SHEFIN FRANKLIN / 001</span>
   </div>
-
-  <span class="background-mark" aria-hidden="true">SF</span>
 </section>
 
-<section class="intro-strip">
-  <span class="strip-label">A LITTLE ABOUT ME</span>
-  <p>
-    Interested in technology, thoughtful design, and building things that
-    make a difference.
-  </p>
-  <a href="#contact" aria-label="Go to contact section">↗</a>
-</section>
+<div class="divider"></div>
 
-<section class="projects section" id="projects">
+<section class="section" id="projects">
   <div class="section-heading">
     <div>
-      <p class="eyebrow">SELECTED WORK</p>
-      <h2>Things I'm <span>building.</span></h2>
+      <p class="eyebrow">WHAT I'M WORKING ON</p>
+      <h2>Selected <span>projects.</span></h2>
     </div>
-    <span class="section-number">01 / PROJECTS</span>
+    <span class="index">01 — 02</span>
   </div>
 
-  <div class="project-grid">
-    <article class="project-card">
-      <div class="project-topline">
-        <span>PROJECT / 001</span>
-        <span class="project-arrow">↗</span>
-      </div>
-      <div class="project-icon" aria-hidden="true">&lt;/&gt;</div>
-      <h3>Web Development</h3>
-      <p>
-        Websites and web experiences designed around clarity, usability,
-        and performance.
-      </p>
-      <div class="project-tags">
-        <span>WEB</span>
-        <span>DESIGN</span>
-      </div>
+  <div class="projects">
+    <article class="project">
+      <span class="project-number">01 / WEB</span>
+      <h3>Web experiences</h3>
+      <p>Clean, responsive websites built with a focus on usability and performance.</p>
+      <span class="project-symbol">&lt;/&gt;</span>
     </article>
 
-    <article class="project-card">
-      <div class="project-topline">
-        <span>PROJECT / 002</span>
-        <span class="project-arrow">↗</span>
-      </div>
-      <div class="project-icon" aria-hidden="true">⌘</div>
-      <h3>Tools &amp; Experiments</h3>
-      <p>
-        Small applications and technical experiments built to solve
-        problems and explore new ideas.
-      </p>
-      <div class="project-tags">
-        <span>BUILD</span>
-        <span>EXPLORE</span>
-      </div>
+    <article class="project">
+      <span class="project-number">02 / TOOLS</span>
+      <h3>Tools &amp; experiments</h3>
+      <p>Applications and experiments for exploring ideas and solving practical problems.</p>
+      <span class="project-symbol">↗</span>
     </article>
   </div>
-  <p class="projects-note">
-    This section currently contains project categories. Replace them with
-    your actual projects and repository links as they are ready.
-  </p>
+  <p class="note">Replace these examples with your actual projects and links.</p>
 </section>
 
-<section class="contact section" id="contact">
-  <p class="eyebrow">HAVE SOMETHING IN MIND?</p>
-  <h2>Let's build<br /><span>something good.</span></h2>
-  <p class="contact-description">
-    Have a project, an idea, or an interesting problem to solve? Let's connect.
+<div class="divider"></div>
+
+<section class="contact" id="contact">
+  <p class="eyebrow">HAVE AN IDEA?</p>
+  <h2>Let's make it<br /><span>happen.</span></h2>
+  <p class="description">
+    Interested in collaborating or building something together?
+    I'd be happy to hear from you.
   </p>
-  <a class="button button-primary" href="mailto:hello@shefin.dev">
-    Email me <span>↗</span>
+  <a class="primary" href="mailto:hello@shefin.dev">
+    Say hello <span>↗</span>
   </a>
-  <p class="email-note">
-    Update the email address if you use a different inbox.
-  </p>
+  <p class="note">Update the email address if needed.</p>
 </section>
 
-<footer class="footer">
-  <a class="brand footer-brand" href="/">
-    <span class="brand-mark">SF</span>
-    <span class="brand-name">SHEFIN<span class="blue">.</span>DEV</span>
-  </a>
-  <p>Designed with intent. Built with curiosity.</p>
-  <a class="back-to-top" href="#about">BACK TO TOP ↑</a>
+<footer>
+  <span>© {new Date().getFullYear()} Shefin Franklin</span>
+  <a href="#about">Back to top ↑</a>
 </footer>
 
   </main>
 </Layout>
 
 <style>
-  .portfolio {
-    --electric-blue: #2563eb;
-    --electric-blue-bright: #3b82f6;
-    --surface: color-mix(in oklab, var(--foreground) 4%, var(--background));
-
-    width: 100%;
+  .home {
+    --blue: #3b82f6;
+    --blue-strong: #2563eb;
     color: var(--foreground);
   }
 
-  .topbar {
+  .nav {
     display: flex;
     align-items: center;
     justify-content: space-between;
     gap: 1rem;
     padding-block: 1.25rem;
-    border-block-end: 1px solid var(--border);
+    border-bottom: 1px solid var(--border);
   }
 
-  .brand {
-    display: inline-flex;
-    align-items: center;
-    gap: 0.65rem;
-    color: var(--foreground);
-    text-decoration: none;
+  .domain {
+    font-size: 0.95rem;
+    font-weight: 600;
+    letter-spacing: -0.04em;
   }
 
-  .brand-mark {
-    display: grid;
-    width: 2.35rem;
-    aspect-ratio: 1;
-    place-items: center;
-    border-radius: 7px;
-    background: var(--electric-blue);
-    color: white;
-    font-family: var(--font-mono);
-    font-size: 0.85rem;
-    font-weight: 700;
-    letter-spacing: -0.08em;
-  }
-
-  .brand-name {
-    font-family: var(--font-mono);
-    font-size: 0.82rem;
-    font-weight: 700;
-    letter-spacing: -0.06em;
-  }
-
-  .blue,
-  .eyebrow {
-    color: var(--electric-blue-bright);
-  }
-
-  .topbar nav {
+  .nav nav {
     display: flex;
     align-items: center;
-    gap: clamp(0.75rem, 2.5vw, 2rem);
+    gap: clamp(0.8rem, 3vw, 1.75rem);
   }
 
-  .topbar nav a {
+  .nav a,
+  footer a {
     color: var(--muted-foreground);
     font-size: 0.82rem;
     text-decoration: none;
     transition: color 150ms ease;
   }
 
-  .topbar nav a:hover {
-    color: var(--electric-blue-bright);
+  .nav a:hover,
+  footer a:hover {
+    color: var(--blue);
   }
 
-  .topbar nav .nav-contact {
-    padding: 0.6rem 0.8rem;
-    border: 1px solid var(--border);
-    border-radius: 6px;
-    color: var(--foreground);
-  }
-
-  .nav-contact span {
-    color: var(--electric-blue-bright);
+  .blue,
+  .section-heading h2 span,
+  .contact h2 span {
+    color: var(--blue);
   }
 
   .hero {
-    position: relative;
     display: grid;
-    grid-template-columns: minmax(0, 1.1fr) minmax(240px, 0.9fr);
+    grid-template-columns: minmax(0, 1fr) minmax(200px, 0.65fr);
     align-items: center;
-    gap: clamp(2rem, 6vw, 5rem);
-    min-height: 34rem;
-    padding-block: clamp(3rem, 8vw, 6.5rem);
-    isolation: isolate;
+    gap: clamp(2rem, 7vw, 5rem);
+    padding-block: clamp(3.5rem, 9vw, 7rem);
   }
 
-  .hero-content,
-  .portrait-area {
+  .hero-text {
     min-width: 0;
   }
 
-  .hero-content {
-    z-index: 1;
-  }
-
-  .availability {
-    display: inline-flex;
+  .eyebrow {
+    display: flex;
     align-items: center;
-    gap: 0.55rem;
-    margin-block-end: 2.4rem;
-    padding: 0.5rem 0.7rem;
-    border: 1px solid var(--border);
-    border-radius: 5px;
+    gap: 0.6rem;
+    margin: 0 0 1.25rem;
     color: var(--muted-foreground);
     font-family: var(--font-mono);
-    font-size: 0.67rem;
-    letter-spacing: 0.06em;
+    font-size: 0.68rem;
+    letter-spacing: 0.09em;
   }
 
-  .status-dot {
+  .dot {
     width: 7px;
     height: 7px;
     border-radius: 50%;
-    background: var(--electric-blue-bright);
-    box-shadow: 0 0 12px color-mix(in oklab, var(--electric-blue) 60%, transparent);
+    background: var(--blue);
   }
 
-  .eyebrow {
-    margin: 0 0 0.85rem;
-    font-family: var(--font-mono);
-    font-size: 0.72rem;
-    font-weight: 500;
-    letter-spacing: 0.12em;
+  h1,
+  h2,
+  h3,
+  p {
+    text-wrap: pretty;
   }
 
   .hero h1 {
     margin: 0;
-    font-size: clamp(3.5rem, 7.7vw, 6.5rem);
-    font-weight: 700;
+    font-size: clamp(3.2rem, 7vw, 6rem);
+    line-height: 1.02;
     letter-spacing: -0.075em;
-    line-height: 0.98;
+    font-weight: 700;
   }
 
   .hero h1 span {
-    color: var(--muted-foreground);
+    color: var(--blue);
   }
 
-  .hero-description {
+  .description {
     max-width: 27rem;
-    margin-block: 1.6rem 1.8rem;
+    margin-block: 1.5rem;
     color: var(--muted-foreground);
-    font-size: 1rem;
-    line-height: 1.8;
+    font-size: 0.98rem;
+    line-height: 1.85;
   }
 
-  .hero-actions {
+  .actions {
     display: flex;
     flex-wrap: wrap;
     gap: 0.75rem;
   }
 
-  .button {
+  .primary,
+  .secondary {
     display: inline-flex;
     align-items: center;
     justify-content: center;
     gap: 1rem;
-    min-height: 2.8rem;
+    min-height: 2.75rem;
     padding: 0.75rem 1rem;
     border: 1px solid var(--border);
-    border-radius: 6px;
-    font-size: 0.83rem;
-    font-weight: 500;
+    border-radius: 5px;
+    font-size: 0.82rem;
     text-decoration: none;
     transition:
       background-color 150ms ease,
-      border-color 150ms ease,
-      transform 150ms ease;
+      border-color 150ms ease;
   }
 
-  .button:hover {
-    transform: translateY(-2px);
-  }
-
-  .button-primary {
-    border-color: var(--electric-blue);
-    background: var(--electric-blue);
+  .primary {
+    border-color: var(--blue-strong);
+    background: var(--blue-strong);
     color: #fff;
   }
 
-  .button-primary:hover {
-    border-color: var(--electric-blue-bright);
-    background: var(--electric-blue-bright);
+  .primary:hover {
+    border-color: var(--blue);
+    background: var(--blue);
   }
 
-  .button-secondary {
+  .secondary {
     color: var(--foreground);
   }
 
-  .button-secondary:hover {
-    border-color: var(--electric-blue);
-  }
-
-  .hero-meta {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 0.75rem 1.5rem;
-    margin-block-start: 3rem;
-    color: var(--muted-foreground);
-    font-family: var(--font-mono);
-    font-size: 0.62rem;
-    letter-spacing: 0.04em;
-  }
-
-  .portrait-area {
-    position: relative;
-    width: 100%;
-    max-width: 24rem;
-    justify-self: end;
-  }
-
-  .portrait-index {
-    margin-block-end: 0.75rem;
-    color: var(--muted-foreground);
-    font-family: var(--font-mono);
-    font-size: 0.65rem;
-    letter-spacing: 0.1em;
-  }
-
-  .portrait-frame {
-    position: relative;
-    overflow: hidden;
-    aspect-ratio: 4 / 5;
-    border: 1px solid var(--border);
-    border-radius: 9px;
-    background: #080a0f;
-    isolation: isolate;
-  }
-
-  .portrait-ring {
-    position: absolute;
-    z-index: -1;
-    inset: 12% 5% -15%;
-    border: 1px solid var(--electric-blue);
-    border-radius: 50%;
-    opacity: 0.8;
+  .secondary:hover {
+    border-color: var(--blue);
   }
 
   .portrait {
+    position: relative;
+    width: 100%;
+    max-width: 20rem;
+    justify-self: end;
+  }
+
+  .portrait img {
     display: block;
     width: 100%;
-    height: 100%;
+    aspect-ratio: 4 / 5;
     object-fit: cover;
     object-position: center 30%;
+    border: 1px solid var(--border);
+    border-radius: 7px;
+    background: #0a0a0a;
   }
 
-  .corner {
-    position: absolute;
-    width: 1.25rem;
-    height: 1.25rem;
-    pointer-events: none;
-  }
-
-  .corner-tl {
-    top: 0;
-    left: 0;
-    border-top: 3px solid var(--electric-blue-bright);
-    border-left: 3px solid var(--electric-blue-bright);
-  }
-
-  .corner-br {
-    right: 0;
-    bottom: 0;
-    border-right: 3px solid var(--electric-blue-bright);
-    border-bottom: 3px solid var(--electric-blue-bright);
-  }
-
-  .portrait-caption {
-    display: flex;
-    align-items: center;
-    gap: 0.7rem;
-    margin-block-start: 1rem;
+  .image-label {
+    display: block;
+    margin-block-start: 0.75rem;
     color: var(--muted-foreground);
     font-family: var(--font-mono);
-    font-size: 0.62rem;
-    line-height: 1.7;
-    letter-spacing: 0.04em;
+    font-size: 0.63rem;
+    letter-spacing: 0.06em;
   }
 
-  .caption-line {
-    width: 1.5rem;
-    height: 2px;
-    background: var(--electric-blue);
-  }
-
-  .caption-code {
-    margin-inline-start: auto;
-    color: var(--electric-blue-bright);
-  }
-
-  .background-mark {
-    position: absolute;
-    z-index: -1;
-    top: 12%;
-    right: 0;
-    color: var(--foreground);
-    font-family: var(--font-mono);
-    font-size: clamp(7rem, 17vw, 15rem);
-    font-weight: 700;
-    letter-spacing: -0.12em;
-    opacity: 0.035;
-    pointer-events: none;
-  }
-
-  .intro-strip {
-    display: grid;
-    grid-template-columns: auto 1fr auto;
-    align-items: center;
-    gap: 1.5rem;
-    padding-block: 1.5rem;
-    border-block: 1px solid var(--border);
-  }
-
-  .strip-label,
-  .section-number {
-    color: var(--muted-foreground);
-    font-family: var(--font-mono);
-    font-size: 0.65rem;
-    letter-spacing: 0.08em;
-  }
-
-  .intro-strip p {
-    margin: 0;
-    color: var(--foreground);
-    font-size: 0.9rem;
-    line-height: 1.7;
-  }
-
-  .intro-strip > a {
-    color: var(--electric-blue-bright);
-    font-size: 1.25rem;
-    text-decoration: none;
+  .divider {
+    height: 1px;
+    background: var(--border);
   }
 
   .section {
-    padding-block: clamp(4rem, 9vw, 7rem);
+    padding-block: clamp(3.5rem, 8vw, 6rem);
   }
 
   .section-heading {
@@ -507,268 +279,169 @@ import Layout from "@/layouts/Layout.astro"
     align-items: end;
     justify-content: space-between;
     gap: 1rem;
-    margin-block-end: 2rem;
+    margin-block-end: 1.75rem;
+  }
+
+  .section-heading .eyebrow {
+    margin-block-end: 0.7rem;
   }
 
   .section-heading h2,
   .contact h2 {
     margin: 0;
-    font-size: clamp(2.2rem, 5vw, 3.8rem);
+    font-size: clamp(2.2rem, 5vw, 3.5rem);
     font-weight: 600;
     letter-spacing: -0.065em;
     line-height: 1.1;
   }
 
-  .section-heading h2 span,
-  .contact h2 span {
-    color: var(--muted-foreground);
-  }
-
-  .section-number {
+  .index {
     padding-block-end: 0.4rem;
+    color: var(--muted-foreground);
+    font-family: var(--font-mono);
+    font-size: 0.68rem;
     white-space: nowrap;
   }
 
-  .project-grid {
+  .projects {
     display: grid;
     grid-template-columns: repeat(2, minmax(0, 1fr));
     gap: 1rem;
   }
 
-  .project-card {
+  .project {
+    position: relative;
     min-width: 0;
-    padding: clamp(1.2rem, 3vw, 2rem);
+    min-height: 13rem;
+    padding: 1.5rem;
+    overflow: hidden;
     border: 1px solid var(--border);
-    border-radius: 8px;
-    background: var(--surface);
-    transition:
-      border-color 180ms ease,
-      transform 180ms ease;
+    border-radius: 6px;
+    background: color-mix(in oklab, var(--foreground) 3%, var(--background));
+    transition: border-color 150ms ease;
   }
 
-  .project-card:hover {
-    transform: translateY(-3px);
-    border-color: var(--electric-blue);
+  .project:hover {
+    border-color: var(--blue);
   }
 
-  .project-topline {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    color: var(--muted-foreground);
+  .project-number {
+    color: var(--blue);
     font-family: var(--font-mono);
     font-size: 0.65rem;
-    letter-spacing: 0.07em;
+    letter-spacing: 0.06em;
   }
 
-  .project-arrow {
-    color: var(--electric-blue-bright);
-    font-size: 1rem;
-  }
-
-  .project-icon {
-    display: grid;
-    width: 3rem;
-    height: 3rem;
-    margin-block: 2.5rem 1.5rem;
-    place-items: center;
-    border: 1px solid color-mix(in oklab, var(--electric-blue) 40%, var(--border));
-    border-radius: 7px;
-    color: var(--electric-blue-bright);
-    font-family: var(--font-mono);
+  .project h3 {
+    margin-block: 1.75rem 0.5rem;
     font-size: 1.15rem;
-  }
-
-  .project-card h3 {
-    margin: 0;
-    font-size: 1.25rem;
     font-weight: 600;
     letter-spacing: -0.035em;
   }
 
-  .project-card > p {
-    min-height: 3.5rem;
-    margin-block: 0.75rem 1.5rem;
+  .project p {
+    max-width: 23rem;
+    margin: 0;
     color: var(--muted-foreground);
-    font-size: 0.9rem;
+    font-size: 0.85rem;
     line-height: 1.75;
   }
 
-  .project-tags {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 0.5rem;
-  }
-
-  .project-tags span {
-    padding: 0.35rem 0.5rem;
-    border: 1px solid var(--border);
-    border-radius: 4px;
-    color: var(--muted-foreground);
+  .project-symbol {
+    position: absolute;
+    right: 1.25rem;
+    bottom: 0.6rem;
+    color: var(--blue);
     font-family: var(--font-mono);
-    font-size: 0.6rem;
+    font-size: 2.2rem;
+    opacity: 0.18;
   }
 
-  .projects-note {
-    margin-block-start: 1rem;
+  .note {
+    margin-block: 1rem 0;
     color: var(--muted-foreground);
-    font-size: 0.78rem;
+    font-size: 0.75rem;
     line-height: 1.7;
   }
 
   .contact {
-    border-block-start: 1px solid var(--border);
+    padding-block: clamp(3.5rem, 8vw, 6rem);
+    border-top: 1px solid var(--border);
   }
 
-  .contact h2 {
-    font-size: clamp(3rem, 7vw, 5.5rem);
+  .contact .description {
+    margin-block: 1rem 1.5rem;
   }
 
-  .contact-description {
-    max-width: 29rem;
-    margin-block: 1.25rem 1.5rem;
-    color: var(--muted-foreground);
-    font-size: 0.95rem;
-    line-height: 1.8;
-  }
-
-  .email-note {
+  .contact .note {
     margin-block-start: 0.75rem;
-    color: var(--muted-foreground);
-    font-size: 0.72rem;
   }
 
-  .footer {
+  footer {
     display: flex;
     align-items: center;
     justify-content: space-between;
     gap: 1rem;
     padding-block: 1.5rem;
-    border-block-start: 1px solid var(--border);
+    border-top: 1px solid var(--border);
   }
 
-  .footer > p {
-    margin: 0;
+  footer span {
     color: var(--muted-foreground);
     font-size: 0.75rem;
-    text-align: center;
   }
 
-  .footer-brand .brand-mark {
-    width: 2rem;
-    font-size: 0.75rem;
-  }
-
-  .footer-brand .brand-name {
-    font-size: 0.72rem;
-  }
-
-  .back-to-top {
-    color: var(--muted-foreground);
-    font-family: var(--font-mono);
-    font-size: 0.62rem;
-    text-decoration: none;
-    white-space: nowrap;
-  }
-
-  .back-to-top:hover {
-    color: var(--electric-blue-bright);
-  }
-
-  @media (min-width: 64rem) {
-    .hero {
-      margin-inline: 0;
-    }
-  }
-
-  @media (max-width: 48rem) {
+  @media (max-width: 42rem) {
     .hero {
       grid-template-columns: minmax(0, 1fr);
-      gap: 3rem;
-      padding-block: 3.5rem;
+      gap: 2.5rem;
     }
 
     .hero h1 {
-      font-size: clamp(3.5rem, 13vw, 5.5rem);
+      font-size: clamp(3.2rem, 13vw, 5rem);
     }
 
-    .availability {
-      margin-block-end: 1.8rem;
-    }
-
-    .hero-meta {
-      margin-block-start: 2rem;
-    }
-
-    .portrait-area {
-      width: min(100%, 24rem);
-      justify-self: center;
-    }
-
-    .intro-strip {
-      grid-template-columns: 1fr auto;
-      gap: 0.75rem;
-    }
-
-    .strip-label {
-      grid-column: 1 / -1;
+    .portrait {
+      justify-self: start;
+      max-width: 19rem;
     }
 
     .section-heading {
       align-items: start;
-      flex-direction: column;
     }
 
-    .project-grid {
+    .projects {
       grid-template-columns: minmax(0, 1fr);
-    }
-
-    .project-card > p {
-      min-height: 0;
     }
   }
 
-  @media (max-width: 30rem) {
-    .topbar {
+  @media (max-width: 27rem) {
+    .nav {
       align-items: flex-start;
       flex-direction: column;
     }
 
-    .topbar nav {
+    .nav nav {
       width: 100%;
       justify-content: space-between;
     }
 
-    .hero-actions {
+    .actions {
       align-items: stretch;
       flex-direction: column;
     }
 
-    .button {
-      justify-content: space-between;
-    }
-
-    .footer {
+    footer {
       align-items: flex-start;
       flex-direction: column;
-    }
-
-    .footer > p {
-      text-align: start;
     }
   }
 
   @media (prefers-reduced-motion: reduce) {
-    .portfolio *,
-    .portfolio *::before,
-    .portfolio *::after {
-      scroll-behavior: auto;
-      transition-duration: 0.01ms;
-    }
-
-    .button:hover,
-    .project-card:hover {
-      transform: none;
+    .home *,
+    .home *::before,
+    .home *::after {
+      transition: none !important;
     }
   }
 </style>
