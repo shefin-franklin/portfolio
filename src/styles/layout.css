@@ -1,5 +1,6 @@
+```css
 :root {
-  /* https://utopia.fyi/grid/calculator?c=320,16,1.125,1024,18,1.2,6,1,&s=0.75%7C0.5%7C0.25,1.5%7C2%7C3%7C4%7C6,s-l%7Cs-m&g=s,m,2xl,12 */
+  /* Responsive spacing scale */
   --space-3xs: clamp(0.25rem, 0.2269rem + 0.1127vw, 0.3125rem);
   --space-2xs: clamp(0.5rem, 0.4769rem + 0.1127vw, 0.5625rem);
   --space-xs: clamp(0.75rem, 0.7038rem + 0.2255vw, 0.875rem);
@@ -10,6 +11,7 @@
   --space-2xl: clamp(4rem, 3.8151rem + 0.9019vw, 4.5rem);
   --space-3xl: clamp(6rem, 5.7227rem + 1.3529vw, 6.75rem);
 
+  /* Fluid spacing pairs */
   --space-3xs-2xs: clamp(0.25rem, 0.1344rem + 0.5637vw, 0.5625rem);
   --space-2xs-xs: clamp(0.5rem, 0.3613rem + 0.6764vw, 0.875rem);
   --space-xs-s: clamp(0.75rem, 0.6113rem + 0.6764vw, 1.125rem);
@@ -19,47 +21,81 @@
   --space-xl-2xl: clamp(3rem, 2.4453rem + 2.7057vw, 4.5rem);
   --space-2xl-3xl: clamp(4rem, 2.9831rem + 4.9605vw, 6.75rem);
 
+  /* Responsive grid */
   --grid-max-width: 75.94rem;
   --grid-gutter: var(--space-s-m);
   --grid-columns: 12;
+
   --grid-edge: max(
     var(--grid-gutter),
     (100% - var(--grid-max-width)) / 2 + var(--grid-gutter)
   );
+
   --grid-column-width: calc(
     (
-        min(100%, var(--grid-max-width)) -
-          (var(--grid-columns) + 1) * var(--grid-gutter)
-      ) /
-      var(--grid-columns)
+      min(100%, var(--grid-max-width)) -
+      (var(--grid-columns) + 1) * var(--grid-gutter)
+    ) / var(--grid-columns)
   );
-  --bar-gutter: max(var(--grid-gutter), (100% - var(--measure)) / 2);
-  --bar-border-image: linear-gradient(
-      to right,
-      transparent 0 var(--bar-gutter),
-      var(--border) 0 calc(100% - var(--bar-gutter)),
-      transparent 0
-    )
-    1;
 
+  /* Navigation and content bar alignment */
+  --bar-gutter: max(
+    var(--grid-gutter),
+    (100% - var(--measure)) / 2
+  );
+
+  --bar-border-image: linear-gradient(
+    to right,
+    transparent 0 var(--bar-gutter),
+    var(--border) 0 calc(100% - var(--bar-gutter)),
+    transparent 0
+  ) 1;
+
+  /* Page rhythm */
   --page-offset-top: var(--space-xl);
-  --page-offset-bottom: var(--space-m);
+  --page-offset-bottom: var(--space-l);
 }
 
+/* Smooth, stable page layout */
 html {
   scrollbar-gutter: stable;
+  scroll-behavior: smooth;
+}
 
-  @media (width < 64rem) {
+/* Tablet and mobile layout */
+@media (width < 64rem) {
+  html {
     --bar-nav-height: calc(2rem + 2 * var(--space-2xs) + 2px);
     --bar-toc-height: 0px;
+
     scroll-padding-block-start: calc(
       var(--bar-nav-height) +
       var(--bar-toc-height) +
-      var(--space-2xs)
+      var(--space-xs)
     );
+  }
 
-    &:has(page-toc) {
-      --bar-toc-height: calc(1.5 * var(--step--1) + 2 * var(--space-2xs) + 2px);
-    }
+  html:has(page-toc) {
+    --bar-toc-height: calc(
+      1.5 * var(--step--1) +
+      2 * var(--space-2xs) +
+      2px
+    );
   }
 }
+
+/* Compact spacing on smaller phones */
+@media (width < 40rem) {
+  :root {
+    --page-offset-top: var(--space-l);
+    --page-offset-bottom: var(--space-m);
+  }
+}
+
+/* Respect reduced-motion preferences */
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+}
+```
