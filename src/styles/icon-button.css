@@ -4,15 +4,53 @@
   justify-content: center;
   width: 2rem;
   height: 2rem;
+  padding: 0;
+  color: var(--foreground);
+  background-color: transparent;
+  border: 1px solid transparent;
   border-radius: var(--radius-md);
   cursor: pointer;
+  transition:
+    color var(--transition-fast, 150ms ease),
+    background-color var(--transition-fast, 150ms ease),
+    border-color var(--transition-fast, 150ms ease);
 
   &:hover {
-    background-color: color-mix(in oklab, var(--muted) 50%, transparent);
+    color: var(--primary);
+    background-color: color-mix(
+      in oklab,
+      var(--primary) 9%,
+      transparent
+    );
+  }
+
+  &:active {
+    background-color: color-mix(
+      in oklab,
+      var(--primary) 16%,
+      transparent
+    );
+  }
+
+  &:focus-visible {
+    outline: 2px solid var(--ring, var(--primary));
+    outline-offset: 2px;
+  }
+
+  &:disabled,
+  &[aria-disabled="true"] {
+    opacity: 0.45;
+    cursor: not-allowed;
+    pointer-events: none;
   }
 
   svg {
     width: 1rem;
     height: 1rem;
+    flex-shrink: 0;
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    transition: none;
   }
 }
