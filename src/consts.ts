@@ -6,7 +6,7 @@ import RSS from "@/assets/icons/rss.svg"
 import Twitter from "@/assets/icons/twitter.svg"
 
 export const SITE = {
-  title: "Portfolio | Shefin Franklin",
+  title: "Shefin Franklin",
   description: "Shefin Franklin is a developer building modern web applications, developer tools, and digital experiences with a focus on simplicity, performance, and thoughtful design.",
   locale: "en-IN",
   dir: "ltr",
