@@ -1,33 +1,47 @@
+
 :root {
-  --gray-1:  light-dark(#fcfcfc, #111111);
-  --gray-2:  light-dark(#f9f9f9, #191919);
-  --gray-3:  light-dark(#f0f0f0, #222222);
-  --gray-4:  light-dark(#e8e8e8, #2a2a2a);
-  --gray-5:  light-dark(#e0e0e0, #313131);
-  --gray-6:  light-dark(#d9d9d9, #3a3a3a);
-  --gray-7:  light-dark(#cecece, #484848);
-  --gray-8:  light-dark(#bbbbbb, #606060);
-  --gray-9:  light-dark(#8d8d8d, #6e6e6e);
-  --gray-10: light-dark(#838383, #7b7b7b);
-  --gray-11: light-dark(#646464, #b4b4b4);
-  --gray-12: light-dark(#202020, #eeeeee);
+  /* Neutral palette — Light mode / Dark mode */
+  --gray-1:  light-dark(#ffffff, #09090b);
+  --gray-2:  light-dark(#fafafa, #111113);
+  --gray-3:  light-dark(#f4f4f5, #18181b);
+  --gray-4:  light-dark(#e4e4e7, #202024);
+  --gray-5:  light-dark(#d4d4d8, #27272a);
+  --gray-6:  light-dark(#a1a1aa, #323238);
+  --gray-7:  light-dark(#71717a, #45454d);
+  --gray-8:  light-dark(#52525b, #62626c);
+  --gray-9:  light-dark(#71717a, #85858f);
+  --gray-10: light-dark(#52525b, #a1a1aa);
+  --gray-11: light-dark(#3f3f46, #d4d4d8);
+  --gray-12: light-dark(#09090b, #fafafa);
 
-  --red-9:  light-dark(#e5484d, #e5484d);
-  --red-11: light-dark(#ce2c31, #ff9592);
+  /* Electric blue accent */
+  --blue-9:  #2563eb;
+  --blue-10: #1d4ed8;
+  --blue-11: #1d4ed8;
+  --blue-12: #1e40af;
 
+  /* Error / destructive */
+  --red-9:  #dc2626;
+  --red-11: light-dark(#b91c1c, #fca5a5);
+
+  /* Semantic theme variables */
   --background:         var(--gray-1);
   --foreground:         var(--gray-12);
-  --primary:            var(--gray-12);
-  --primary-foreground: var(--gray-1);
+
+  --primary:            var(--blue-9);
+  --primary-foreground: #ffffff;
+
   --muted:              var(--gray-3);
-  --muted-foreground:   var(--gray-11);
+  --muted-foreground:   var(--gray-10);
+
   --destructive:        var(--red-11);
-  --border:             var(--gray-6);
-  --ring:               var(--gray-8);
+  --border:             var(--gray-5);
+  --ring:               var(--blue-9);
 
   color-scheme: light dark;
 }
 
+/* Consistent borders and keyboard accessibility */
 *,
 ::before,
 ::after,
@@ -42,7 +56,39 @@
   }
 }
 
+/* Main page */
 body {
   background-color: var(--background);
   color: var(--foreground);
+}
+
+/* Links */
+a {
+  text-decoration-color: var(--blue-9);
+  text-underline-offset: 4px;
+  transition: color 180ms ease;
+}
+
+a:hover {
+  color: light-dark(var(--blue-10), #60a5fa);
+}
+
+/* Text selection */
+::selection {
+  background-color: var(--blue-9);
+  color: #ffffff;
+}
+
+/* Accessible keyboard focus */
+:focus-visible {
+  outline-color: var(--blue-9);
+}
+
+/* Smooth theme transitions */
+body,
+a {
+  transition:
+    background-color 180ms ease,
+    color 180ms ease,
+    border-color 180ms ease;
 }
