@@ -1,4 +1,3 @@
-```css
 :root {
   /* Responsive spacing scale */
   --space-3xs: clamp(0.25rem, 0.2269rem + 0.1127vw, 0.3125rem);
@@ -98,4 +97,3 @@ html {
     scroll-behavior: auto;
   }
 }
-```
