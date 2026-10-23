@@ -1,108 +1,777 @@
 ---
+
 import MetaPage from "@/components/MetaPage.astro"
 import Layout from "@/layouts/Layout.astro"
----
+-------------------------------------------
 
 <Layout>
   <MetaPage slot="head" />
-  <dictionary-entry>
-    <h1>er·u·dite</h1>
-    <etymology-span>
-      <ipa-span>/ˈer(y)əˌdīt/</ipa-span>
-      adj. [L. <i>ēruditus</i>, instructed, pp. of <i>ērudīre</i> to instruct,
-      polish, lit. to free from roughness, f. ē- out + <i>rudis</i> rough,
-      untrained]
-    </etymology-span>
-    <ol>
-      <li>
-        having or showing deep, wide-ranging knowledge acquired through study;
-        learned (<i>an erudite scholar</i>).
-      </li>
-      <li>
-        (of writing, speech, or argument) reflecting such knowledge; scholarly (<i
-          >an erudite footnote</i
-        >).
-      </li>
-    </ol>
-    <hr>
-    <prose-content>
+
+  <main class="portfolio">
+    <header class="topbar">
+      <a class="brand" href="/" aria-label="Shefin Franklin home">
+        <span class="brand-mark">SF</span>
+        <span class="brand-name">SHEFIN<span class="blue">.</span>DEV</span>
+      </a>
+
+```
+  <nav aria-label="Main navigation">
+    <a href="#about">About</a>
+    <a href="#projects">Projects</a>
+    <a href="#contact" class="nav-contact">Contact <span>↗</span></a>
+  </nav>
+</header>
+
+<section class="hero" id="about">
+  <div class="hero-content">
+    <div class="availability">
+      <span class="status-dot"></span>
+      DEVELOPER PORTFOLIO
+    </div>
+
+    <p class="eyebrow">HELLO, WORLD. I'M</p>
+
+    <h1>Shefin<br /><span>Franklin.</span></h1>
+
+    <p class="hero-description">
+      I build for the web, explore new technologies, and turn ideas into
+      useful digital experiences.
+    </p>
+
+    <div class="hero-actions">
+      <a class="button button-primary" href="#projects">
+        Explore my work <span>↘</span>
+      </a>
+      <a class="button button-secondary" href="#contact">
+        Get in touch <span>↗</span>
+      </a>
+    </div>
+
+    <div class="hero-meta">
+      <span><span class="blue">01</span> — DESIGN WITH PURPOSE</span>
+      <span><span class="blue">02</span> — BUILD WITH CARE</span>
+    </div>
+  </div>
+
+  <div class="portrait-area">
+    <div class="portrait-index">PROFILE / 001</div>
+    <div class="portrait-frame">
+      <div class="portrait-ring"></div>
+      <img
+        class="portrait"
+        src="/images/profile.jpg"
+        alt="Portrait of Shefin Franklin"
+        fetchpriority="high"
+      />
+      <span class="corner corner-tl"></span>
+      <span class="corner corner-br"></span>
+    </div>
+    <div class="portrait-caption">
+      <span class="caption-line"></span>
+      <span>CURIOUS BY NATURE.<br />CREATIVE BY CHOICE.</span>
+      <span class="caption-code">SF—001</span>
+    </div>
+  </div>
+
+  <span class="background-mark" aria-hidden="true">SF</span>
+</section>
+
+<section class="intro-strip">
+  <span class="strip-label">A LITTLE ABOUT ME</span>
+  <p>
+    Interested in technology, thoughtful design, and building things that
+    make a difference.
+  </p>
+  <a href="#contact" aria-label="Go to contact section">↗</a>
+</section>
+
+<section class="projects section" id="projects">
+  <div class="section-heading">
+    <div>
+      <p class="eyebrow">SELECTED WORK</p>
+      <h2>Things I'm <span>building.</span></h2>
+    </div>
+    <span class="section-number">01 / PROJECTS</span>
+  </div>
+
+  <div class="project-grid">
+    <article class="project-card">
+      <div class="project-topline">
+        <span>PROJECT / 001</span>
+        <span class="project-arrow">↗</span>
+      </div>
+      <div class="project-icon" aria-hidden="true">&lt;/&gt;</div>
+      <h3>Web Development</h3>
       <p>
-        astro-erudite is
-        <a href="https://enscribe.dev" target="_blank" rel="noopener noreferrer"
-          >enscribe</a
-        >'s opinionated, unstyled static blogging template built with
-        <a href="https://astro.build" target="_blank" rel="noopener noreferrer"
-          >Astro</a
-        >
-        and native CSS. astro-erudite uses no UI or CSS framework and contains
-        minimal dependencies.
+        Websites and web experiences designed around clarity, usability,
+        and performance.
       </p>
+      <div class="project-tags">
+        <span>WEB</span>
+        <span>DESIGN</span>
+      </div>
+    </article>
+
+    <article class="project-card">
+      <div class="project-topline">
+        <span>PROJECT / 002</span>
+        <span class="project-arrow">↗</span>
+      </div>
+      <div class="project-icon" aria-hidden="true">⌘</div>
+      <h3>Tools &amp; Experiments</h3>
       <p>
-        To use this template, check out the
-        <a
-          href="https://github.com/jktrn/astro-erudite"
-          target="_blank"
-          rel="noopener noreferrer"
-          >GitHub</a
-        >
-        repository. To learn more about why this template exists, read this blog
-        post: <a href="/blog/introducing-v2">Introducing astro-erudite v2</a>.
+        Small applications and technical experiments built to solve
+        problems and explore new ideas.
       </p>
-    </prose-content>
-  </dictionary-entry>
+      <div class="project-tags">
+        <span>BUILD</span>
+        <span>EXPLORE</span>
+      </div>
+    </article>
+  </div>
+  <p class="projects-note">
+    This section currently contains project categories. Replace them with
+    your actual projects and repository links as they are ready.
+  </p>
+</section>
+
+<section class="contact section" id="contact">
+  <p class="eyebrow">HAVE SOMETHING IN MIND?</p>
+  <h2>Let's build<br /><span>something good.</span></h2>
+  <p class="contact-description">
+    Have a project, an idea, or an interesting problem to solve? Let's connect.
+  </p>
+  <a class="button button-primary" href="mailto:hello@shefin.dev">
+    Email me <span>↗</span>
+  </a>
+  <p class="email-note">
+    Update the email address if you use a different inbox.
+  </p>
+</section>
+
+<footer class="footer">
+  <a class="brand footer-brand" href="/">
+    <span class="brand-mark">SF</span>
+    <span class="brand-name">SHEFIN<span class="blue">.</span>DEV</span>
+  </a>
+  <p>Designed with intent. Built with curiosity.</p>
+  <a class="back-to-top" href="#about">BACK TO TOP ↑</a>
+</footer>
+```
+
+  </main>
 </Layout>
 
 <style>
-  dictionary-entry {
-    display: block;
-    font-size: var(--step-0);
+  .portfolio {
+    --electric-blue: #2563eb;
+    --electric-blue-bright: #3b82f6;
+    --surface: color-mix(in oklab, var(--foreground) 4%, var(--background));
+
+    width: 100%;
+    color: var(--foreground);
+  }
+
+  .topbar {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 1rem;
+    padding-block: 1.25rem;
+    border-block-end: 1px solid var(--border);
+  }
+
+  .brand {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.65rem;
+    color: var(--foreground);
+    text-decoration: none;
+  }
+
+  .brand-mark {
+    display: grid;
+    width: 2.35rem;
+    aspect-ratio: 1;
+    place-items: center;
+    border-radius: 7px;
+    background: var(--electric-blue);
+    color: white;
+    font-family: var(--font-mono);
+    font-size: 0.85rem;
+    font-weight: 700;
+    letter-spacing: -0.08em;
+  }
+
+  .brand-name {
+    font-family: var(--font-mono);
+    font-size: 0.82rem;
+    font-weight: 700;
+    letter-spacing: -0.06em;
+  }
+
+  .blue,
+  .eyebrow {
+    color: var(--electric-blue-bright);
+  }
+
+  .topbar nav {
+    display: flex;
+    align-items: center;
+    gap: clamp(0.75rem, 2.5vw, 2rem);
+  }
+
+  .topbar nav a {
     color: var(--muted-foreground);
+    font-size: 0.82rem;
+    text-decoration: none;
+    transition: color 150ms ease;
+  }
 
-    @media (width >= 64rem) {
-      margin-block-start: -0.2em;
+  .topbar nav a:hover {
+    color: var(--electric-blue-bright);
+  }
+
+  .topbar nav .nav-contact {
+    padding: 0.6rem 0.8rem;
+    border: 1px solid var(--border);
+    border-radius: 6px;
+    color: var(--foreground);
+  }
+
+  .nav-contact span {
+    color: var(--electric-blue-bright);
+  }
+
+  .hero {
+    position: relative;
+    display: grid;
+    grid-template-columns: minmax(0, 1.1fr) minmax(240px, 0.9fr);
+    align-items: center;
+    gap: clamp(2rem, 6vw, 5rem);
+    min-height: 34rem;
+    padding-block: clamp(3rem, 8vw, 6.5rem);
+    isolation: isolate;
+  }
+
+  .hero-content,
+  .portrait-area {
+    min-width: 0;
+  }
+
+  .hero-content {
+    z-index: 1;
+  }
+
+  .availability {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.55rem;
+    margin-block-end: 2.4rem;
+    padding: 0.5rem 0.7rem;
+    border: 1px solid var(--border);
+    border-radius: 5px;
+    color: var(--muted-foreground);
+    font-family: var(--font-mono);
+    font-size: 0.67rem;
+    letter-spacing: 0.06em;
+  }
+
+  .status-dot {
+    width: 7px;
+    height: 7px;
+    border-radius: 50%;
+    background: var(--electric-blue-bright);
+    box-shadow: 0 0 12px color-mix(in oklab, var(--electric-blue) 60%, transparent);
+  }
+
+  .eyebrow {
+    margin: 0 0 0.85rem;
+    font-family: var(--font-mono);
+    font-size: 0.72rem;
+    font-weight: 500;
+    letter-spacing: 0.12em;
+  }
+
+  .hero h1 {
+    margin: 0;
+    font-size: clamp(3.5rem, 7.7vw, 6.5rem);
+    font-weight: 700;
+    letter-spacing: -0.075em;
+    line-height: 0.98;
+  }
+
+  .hero h1 span {
+    color: var(--muted-foreground);
+  }
+
+  .hero-description {
+    max-width: 27rem;
+    margin-block: 1.6rem 1.8rem;
+    color: var(--muted-foreground);
+    font-size: 1rem;
+    line-height: 1.8;
+  }
+
+  .hero-actions {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.75rem;
+  }
+
+  .button {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 1rem;
+    min-height: 2.8rem;
+    padding: 0.75rem 1rem;
+    border: 1px solid var(--border);
+    border-radius: 6px;
+    font-size: 0.83rem;
+    font-weight: 500;
+    text-decoration: none;
+    transition:
+      background-color 150ms ease,
+      border-color 150ms ease,
+      transform 150ms ease;
+  }
+
+  .button:hover {
+    transform: translateY(-2px);
+  }
+
+  .button-primary {
+    border-color: var(--electric-blue);
+    background: var(--electric-blue);
+    color: #fff;
+  }
+
+  .button-primary:hover {
+    border-color: var(--electric-blue-bright);
+    background: var(--electric-blue-bright);
+  }
+
+  .button-secondary {
+    color: var(--foreground);
+  }
+
+  .button-secondary:hover {
+    border-color: var(--electric-blue);
+  }
+
+  .hero-meta {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.75rem 1.5rem;
+    margin-block-start: 3rem;
+    color: var(--muted-foreground);
+    font-family: var(--font-mono);
+    font-size: 0.62rem;
+    letter-spacing: 0.04em;
+  }
+
+  .portrait-area {
+    position: relative;
+    width: 100%;
+    max-width: 24rem;
+    justify-self: end;
+  }
+
+  .portrait-index {
+    margin-block-end: 0.75rem;
+    color: var(--muted-foreground);
+    font-family: var(--font-mono);
+    font-size: 0.65rem;
+    letter-spacing: 0.1em;
+  }
+
+  .portrait-frame {
+    position: relative;
+    overflow: hidden;
+    aspect-ratio: 4 / 5;
+    border: 1px solid var(--border);
+    border-radius: 9px;
+    background: #080a0f;
+    isolation: isolate;
+  }
+
+  .portrait-ring {
+    position: absolute;
+    z-index: -1;
+    inset: 12% 5% -15%;
+    border: 1px solid var(--electric-blue);
+    border-radius: 50%;
+    opacity: 0.8;
+  }
+
+  .portrait {
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center 30%;
+  }
+
+  .corner {
+    position: absolute;
+    width: 1.25rem;
+    height: 1.25rem;
+    pointer-events: none;
+  }
+
+  .corner-tl {
+    top: 0;
+    left: 0;
+    border-top: 3px solid var(--electric-blue-bright);
+    border-left: 3px solid var(--electric-blue-bright);
+  }
+
+  .corner-br {
+    right: 0;
+    bottom: 0;
+    border-right: 3px solid var(--electric-blue-bright);
+    border-bottom: 3px solid var(--electric-blue-bright);
+  }
+
+  .portrait-caption {
+    display: flex;
+    align-items: center;
+    gap: 0.7rem;
+    margin-block-start: 1rem;
+    color: var(--muted-foreground);
+    font-family: var(--font-mono);
+    font-size: 0.62rem;
+    line-height: 1.7;
+    letter-spacing: 0.04em;
+  }
+
+  .caption-line {
+    width: 1.5rem;
+    height: 2px;
+    background: var(--electric-blue);
+  }
+
+  .caption-code {
+    margin-inline-start: auto;
+    color: var(--electric-blue-bright);
+  }
+
+  .background-mark {
+    position: absolute;
+    z-index: -1;
+    top: 12%;
+    right: 0;
+    color: var(--foreground);
+    font-family: var(--font-mono);
+    font-size: clamp(7rem, 17vw, 15rem);
+    font-weight: 700;
+    letter-spacing: -0.12em;
+    opacity: 0.035;
+    pointer-events: none;
+  }
+
+  .intro-strip {
+    display: grid;
+    grid-template-columns: auto 1fr auto;
+    align-items: center;
+    gap: 1.5rem;
+    padding-block: 1.5rem;
+    border-block: 1px solid var(--border);
+  }
+
+  .strip-label,
+  .section-number {
+    color: var(--muted-foreground);
+    font-family: var(--font-mono);
+    font-size: 0.65rem;
+    letter-spacing: 0.08em;
+  }
+
+  .intro-strip p {
+    margin: 0;
+    color: var(--foreground);
+    font-size: 0.9rem;
+    line-height: 1.7;
+  }
+
+  .intro-strip > a {
+    color: var(--electric-blue-bright);
+    font-size: 1.25rem;
+    text-decoration: none;
+  }
+
+  .section {
+    padding-block: clamp(4rem, 9vw, 7rem);
+  }
+
+  .section-heading {
+    display: flex;
+    align-items: end;
+    justify-content: space-between;
+    gap: 1rem;
+    margin-block-end: 2rem;
+  }
+
+  .section-heading h2,
+  .contact h2 {
+    margin: 0;
+    font-size: clamp(2.2rem, 5vw, 3.8rem);
+    font-weight: 600;
+    letter-spacing: -0.065em;
+    line-height: 1.1;
+  }
+
+  .section-heading h2 span,
+  .contact h2 span {
+    color: var(--muted-foreground);
+  }
+
+  .section-number {
+    padding-block-end: 0.4rem;
+    white-space: nowrap;
+  }
+
+  .project-grid {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 1rem;
+  }
+
+  .project-card {
+    min-width: 0;
+    padding: clamp(1.2rem, 3vw, 2rem);
+    border: 1px solid var(--border);
+    border-radius: 8px;
+    background: var(--surface);
+    transition:
+      border-color 180ms ease,
+      transform 180ms ease;
+  }
+
+  .project-card:hover {
+    transform: translateY(-3px);
+    border-color: var(--electric-blue);
+  }
+
+  .project-topline {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    color: var(--muted-foreground);
+    font-family: var(--font-mono);
+    font-size: 0.65rem;
+    letter-spacing: 0.07em;
+  }
+
+  .project-arrow {
+    color: var(--electric-blue-bright);
+    font-size: 1rem;
+  }
+
+  .project-icon {
+    display: grid;
+    width: 3rem;
+    height: 3rem;
+    margin-block: 2.5rem 1.5rem;
+    place-items: center;
+    border: 1px solid color-mix(in oklab, var(--electric-blue) 40%, var(--border));
+    border-radius: 7px;
+    color: var(--electric-blue-bright);
+    font-family: var(--font-mono);
+    font-size: 1.15rem;
+  }
+
+  .project-card h3 {
+    margin: 0;
+    font-size: 1.25rem;
+    font-weight: 600;
+    letter-spacing: -0.035em;
+  }
+
+  .project-card > p {
+    min-height: 3.5rem;
+    margin-block: 0.75rem 1.5rem;
+    color: var(--muted-foreground);
+    font-size: 0.9rem;
+    line-height: 1.75;
+  }
+
+  .project-tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+  }
+
+  .project-tags span {
+    padding: 0.35rem 0.5rem;
+    border: 1px solid var(--border);
+    border-radius: 4px;
+    color: var(--muted-foreground);
+    font-family: var(--font-mono);
+    font-size: 0.6rem;
+  }
+
+  .projects-note {
+    margin-block-start: 1rem;
+    color: var(--muted-foreground);
+    font-size: 0.78rem;
+    line-height: 1.7;
+  }
+
+  .contact {
+    border-block-start: 1px solid var(--border);
+  }
+
+  .contact h2 {
+    font-size: clamp(3rem, 7vw, 5.5rem);
+  }
+
+  .contact-description {
+    max-width: 29rem;
+    margin-block: 1.25rem 1.5rem;
+    color: var(--muted-foreground);
+    font-size: 0.95rem;
+    line-height: 1.8;
+  }
+
+  .email-note {
+    margin-block-start: 0.75rem;
+    color: var(--muted-foreground);
+    font-size: 0.72rem;
+  }
+
+  .footer {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 1rem;
+    padding-block: 1.5rem;
+    border-block-start: 1px solid var(--border);
+  }
+
+  .footer > p {
+    margin: 0;
+    color: var(--muted-foreground);
+    font-size: 0.75rem;
+    text-align: center;
+  }
+
+  .footer-brand .brand-mark {
+    width: 2rem;
+    font-size: 0.75rem;
+  }
+
+  .footer-brand .brand-name {
+    font-size: 0.72rem;
+  }
+
+  .back-to-top {
+    color: var(--muted-foreground);
+    font-family: var(--font-mono);
+    font-size: 0.62rem;
+    text-decoration: none;
+    white-space: nowrap;
+  }
+
+  .back-to-top:hover {
+    color: var(--electric-blue-bright);
+  }
+
+  @media (min-width: 64rem) {
+    .hero {
+      margin-inline: 0;
+    }
+  }
+
+  @media (max-width: 48rem) {
+    .hero {
+      grid-template-columns: minmax(0, 1fr);
+      gap: 3rem;
+      padding-block: 3.5rem;
     }
 
-    ipa-span {
-      opacity: 0.6;
+    .hero h1 {
+      font-size: clamp(3.5rem, 13vw, 5.5rem);
     }
 
-    h1 {
-      font-size: var(--step-2);
-      line-height: calc(var(--leading-offset) + 1em);
-      font-weight: var(--font-weight-medium);
-      color: var(--foreground);
-      margin-block-end: var(--space-2xs);
+    .availability {
+      margin-block-end: 1.8rem;
     }
 
-    ol {
-      margin-block-start: var(--space-xs);
-      list-style: none;
-
-      li {
-        padding-inline-start: 1em;
-        text-indent: -1em;
-
-        &::before {
-          content: counter(list-item);
-          display: inline-block;
-          inline-size: 1em;
-          text-indent: 0;
-          font-weight: var(--font-weight-medium);
-        }
-
-        + li {
-          margin-block-start: var(--space-3xs);
-        }
-      }
+    .hero-meta {
+      margin-block-start: 2rem;
     }
 
-    hr {
-      margin-block: var(--space-m);
-      border-block-start: 2px solid var(--border);
+    .portrait-area {
+      width: min(100%, 24rem);
+      justify-self: center;
     }
 
-    prose-content {
-      margin-block-start: var(--space-xs);
+    .intro-strip {
+      grid-template-columns: 1fr auto;
+      gap: 0.75rem;
+    }
+
+    .strip-label {
+      grid-column: 1 / -1;
+    }
+
+    .section-heading {
+      align-items: start;
+      flex-direction: column;
+    }
+
+    .project-grid {
+      grid-template-columns: minmax(0, 1fr);
+    }
+
+    .project-card > p {
+      min-height: 0;
+    }
+  }
+
+  @media (max-width: 30rem) {
+    .topbar {
+      align-items: flex-start;
+      flex-direction: column;
+    }
+
+    .topbar nav {
+      width: 100%;
+      justify-content: space-between;
+    }
+
+    .hero-actions {
+      align-items: stretch;
+      flex-direction: column;
+    }
+
+    .button {
+      justify-content: space-between;
+    }
+
+    .footer {
+      align-items: flex-start;
+      flex-direction: column;
+    }
+
+    .footer > p {
+      text-align: start;
+    }
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    .portfolio *,
+    .portfolio *::before,
+    .portfolio *::after {
+      scroll-behavior: auto;
+      transition-duration: 0.01ms;
+    }
+
+    .button:hover,
+    .project-card:hover {
+      transform: none;
     }
   }
 </style>
