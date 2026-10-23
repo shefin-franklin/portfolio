@@ -1,6 +1,6 @@
 {
-  "name": "shefin-franklin",
-  "short_name": "shefin",
+  "name": "Shefin Franklin",
+  "short_name": "Portfolio",
   "icons": [
     {
       "src": "/web-app-manifest-192x192.png",
@@ -16,6 +16,6 @@
     }
   ],
   "theme_color": "#ffffff",
-  "background_color": "#ffffff",
+  "background_color": "#000000",
   "display": "standalone"
 }
