@@ -10,8 +10,8 @@ export const SITE = {
   description: "Shefin Franklin is a developer building modern web applications, developer tools, and digital experiences with a focus on simplicity, performance, and thoughtful design.",
   locale: "en-IN",
   dir: "ltr",
-  defaultPageImage: "/static/opengraph-image.png",
-  defaultPostImage: "/static/1200x630.png",
+  defaultPageImage: "/static/shefin.png",
+  defaultPostImage: "/static/shefin.png",
 } as const
 
 export const NAVIGATION = [
