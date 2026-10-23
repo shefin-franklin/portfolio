@@ -1,7 +1,12 @@
+/* ========================================
+   RESET
+   Minimal, accessible baseline
+   ======================================== */
+
 *,
-::after,
-::before,
-::backdrop,
+*::before,
+*::after,
+*::backdrop,
 ::file-selector-button {
   box-sizing: border-box;
   margin: 0;
@@ -15,6 +20,11 @@ html,
   -webkit-text-size-adjust: 100%;
   tab-size: 4;
   -webkit-tap-highlight-color: transparent;
+  scroll-behavior: smooth;
+}
+
+body {
+  min-height: 100vh;
 }
 
 hr {
@@ -24,8 +34,8 @@ hr {
 }
 
 abbr:where([title]) {
-  -webkit-text-decoration: underline dotted;
   text-decoration: underline dotted;
+  text-underline-offset: 0.15em;
 }
 
 h1,
@@ -40,7 +50,6 @@ h6 {
 
 a {
   color: inherit;
-  -webkit-text-decoration: inherit;
   text-decoration: inherit;
 }
 
@@ -54,6 +63,7 @@ kbd,
 samp,
 pre {
   font-size: 1em;
+  font-family: var(--font-mono, monospace);
 }
 
 small {
@@ -62,9 +72,9 @@ small {
 
 sub,
 sup {
+  position: relative;
   font-size: 75%;
   line-height: 0;
-  position: relative;
   vertical-align: baseline;
 }
 
@@ -82,8 +92,13 @@ table {
   border-collapse: collapse;
 }
 
-:-moz-focusring {
-  outline: auto;
+:focus:not(:focus-visible) {
+  outline: none;
+}
+
+:focus-visible {
+  outline: 2px solid var(--ring, #2563eb);
+  outline-offset: 3px;
 }
 
 progress {
@@ -92,6 +107,7 @@ progress {
 
 summary {
   display: list-item;
+  cursor: pointer;
 }
 
 ol,
@@ -118,6 +134,10 @@ video {
   height: auto;
 }
 
+svg {
+  flex-shrink: 0;
+}
+
 button,
 input,
 select,
@@ -134,6 +154,21 @@ textarea,
   opacity: 1;
 }
 
+button,
+input:where([type="button"], [type="reset"], [type="submit"]),
+::file-selector-button {
+  appearance: button;
+  cursor: pointer;
+}
+
+button:disabled,
+input:disabled,
+select:disabled,
+textarea:disabled {
+  cursor: not-allowed;
+  opacity: 0.55;
+}
+
 :where(select:is([multiple], [size])) optgroup {
   font-weight: bolder;
 }
@@ -147,14 +182,8 @@ textarea,
 }
 
 ::placeholder {
+  color: color-mix(in oklab, currentColor 50%, transparent);
   opacity: 1;
-}
-
-@supports (not (-webkit-appearance: -apple-pay-button)) or
-  (contain-intrinsic-size: 1px) {
-  ::placeholder {
-    color: color-mix(in oklab, currentcolor 50%, transparent);
-  }
 }
 
 textarea {
@@ -198,12 +227,6 @@ textarea {
   box-shadow: none;
 }
 
-button,
-input:where([type="button"], [type="reset"], [type="submit"]),
-::file-selector-button {
-  appearance: button;
-}
-
 ::-webkit-inner-spin-button,
 ::-webkit-outer-spin-button {
   height: auto;
@@ -214,12 +237,16 @@ input:where([type="button"], [type="reset"], [type="submit"]),
 }
 
 @media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+
   *,
-  ::before,
-  ::after {
+  *::before,
+  *::after {
+    scroll-behavior: auto !important;
     animation-duration: 0.01ms !important;
     animation-iteration-count: 1 !important;
     transition-duration: 0.01ms !important;
-    scroll-behavior: auto !important;
   }
 }
