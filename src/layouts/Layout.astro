@@ -25,7 +25,9 @@ import { SITE } from "@/consts"
 
 type Props = { crumbs?: { label: string; href: string }[] }
 
-## const { crumbs } = Astro.props
+const { crumbs } = Astro.props
+
+---
 
 <html lang={SITE.locale} dir={SITE.dir}>
   <MetaHead>
